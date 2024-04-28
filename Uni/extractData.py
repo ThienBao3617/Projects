@@ -1,4 +1,4 @@
-from databasefirebase import buildDatabase
+from create import buildDatabase
 import socket
 
 dataServer = buildDatabase()

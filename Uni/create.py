@@ -1,15 +1,15 @@
 import json
-import this
 import time
 
 import firebase_admin
 from firebase_admin import db
 
 cred_obj = firebase_admin.credentials.Certificate(
-    r'D:\PyCharm_IDE\Python_Projects\share\qruserdatabase-firebase-adminsdk-4iw0k-517a8db948.json')
+    r'D:\Github\Projects\Uni\share\qruserdatabase-firebase-adminsdk-4iw0k-517a8db948.json')
 default_app = firebase_admin.initialize_app(cred_obj, {
     'databaseURL': "https://qruserdatabase-default-rtdb.asia-southeast1.firebasedatabase.app/"
 })
+
 
 class buildDatabase:
     # initial
@@ -127,3 +127,6 @@ class buildDatabase:
         if ID in self.db:
             return self.db[ID]
         return {}
+    
+
+print('run code successfully')
