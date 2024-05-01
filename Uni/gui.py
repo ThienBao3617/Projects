@@ -13,8 +13,8 @@ class UserManagementApp(QWidget):
 
         self.create_register_widgets()
         self.create_login_widgets()
-        self.create_logout_widgets()  # Add logout widgets
-        self.create_delete_widgets()  # Add delete widgets
+        self.create_logout_widgets()  
+        self.create_delete_widgets()  
 
         self.database = buildDatabase()
 
