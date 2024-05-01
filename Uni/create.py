@@ -85,6 +85,8 @@ class buildDatabase:
                     break
         if (deleted):
             del  self.db[deleted]
+        else:
+            print("account not found please try another account\n")
 
     def remove_account_baseOn_ID(self, ID):
         if self.refresh_before_modify:
