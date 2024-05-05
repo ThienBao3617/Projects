@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <!-- Thư viện jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Thư viện jQuery UI -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn" onclick="showLoginForm('user')">
+        Đăng nhập với tư cách người dùng
+      </button>
+      <button class="btn" onclick="showRegisterForm()">
+        Đăng ký người dùng mới
+      </button>
+      <button class="btn" onclick="showLoginForm('admin')">
+        Đăng nhập với tư cách quản trị viên
+      </button>
+    </div>
+    <div class="login-form" id="loginForm">
+      <h2>Đăng nhập</h2>
+      <input type="text" id="username" placeholder="Tên đăng nhập" />
+      <input type="password" id="password" placeholder="Mật khẩu" />
+      <button onclick="login()">Đăng nhập</button>
+      <p id="message"></p>
+    </div>
+    <div class="register-form" id="registerForm">
+      <h2>Đăng ký</h2>
+      <input type="text" id="regUsername" placeholder="Tên đăng nhập" />
+      <input type="password" id="regPassword" placeholder="Mật khẩu" />
+      <input type="text" id="regName" placeholder="Tên" />
+      <input type="text" id="regAge" placeholder="Tuổi" />
+      <input type="text" id="regDob" placeholder="Ngày sinh" />
+      <input type="text" id="regGender" placeholder="Giới tính" />
+      <input type="text" id="regAddress" placeholder="Địa chỉ" />
+      <button onclick="register()">Đăng ký</button>
+      <p id="regMessage"></p>
+    </div>
+    <script src="/src/script.js"></script>
+  </body>
+</html>

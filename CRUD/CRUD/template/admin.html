@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" type="text/css" href="/style/admin.css" />
+    <!-- Bao gồm thư viện jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <button class="nav-btn" onclick="showSection('set')">Set giá tiền</button>
+      <button class="nav-btn" onclick="showSection('scan')">Quét QR</button>
+      <button class="nav-btn" onclick="logout()">Đăng xuất</button>
+    </div>
+    <div class="container">
+      <div id="set" class="admin-section">
+        <div id="setInfo">
+          <div>
+            <label for="priceInput">Nhập giá tiền:</label>
+            <input type="number" id="priceInput" name="priceInput" />
+            <button type="button" onclick="updateCost()">Lưu</button>
+          </div>
+        </div>
+      </div>
+      <div id="scan" class="admin-section">
+        <div id="scanInfo">
+          <h2>QR</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/admin.js"></script>
+  </body>
+</html>

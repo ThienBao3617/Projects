@@ -1,0 +1,101 @@
+.navbar {
+  background-color: white;
+  overflow: hidden;
+}
+
+.nav-btn {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.user-section {
+  padding: 20px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-panel {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.right-panel {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.parking-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.parking-spot {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: green;
+  color: white;
+}
+/* Thiết lập bảng */
+#bookingHistoryTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Thiết lập tiêu đề của bảng */
+#bookingHistoryTable th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Thiết lập hàng của bảng */
+#bookingHistoryTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Màu nền xen kẽ cho các hàng */
+#bookingHistoryTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover hiệu ứng */
+#bookingHistoryTable tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Màu cho mã QR */
+#bookingHistoryTable tbody td:nth-child(4) a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}

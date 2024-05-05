@@ -1,0 +1,34 @@
+.container {
+  text-align: center;
+}
+
+.btn {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.login-form {
+  display: none;
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+#scanInfo {
+  display: none;
+}
+input,
+button {
+  margin: 10px;
+  padding: 10px;
+}
+.register-form {
+  display: none;
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#message {
+  color: red;
+}

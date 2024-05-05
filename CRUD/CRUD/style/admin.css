@@ -1,0 +1,35 @@
+/* CSS cho thanh điều hướng */
+.navbar {
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+}
+
+.nav-btn {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* CSS cho các phần */
+.user-section {
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}

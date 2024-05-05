@@ -6,9 +6,9 @@ import time
 
 # Initialize Firebase
 cred_obj = firebase_admin.credentials.Certificate(
-    add your working path)
+    r'D:\Github\Projects\share\qruserdatabase-firebase-adminsdk-4iw0k-517a8db948.json')
 default_app = firebase_admin.initialize_app(cred_obj, {
-    add your database url path
+    'databaseURL': "https://qruserdatabase-default-rtdb.asia-southeast1.firebasedatabase.app/"
 })
 
 # Get the ID from your Firebase database

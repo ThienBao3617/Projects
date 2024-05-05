@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/style/userStyles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/src/qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <button class="nav-btn" onclick="showSection('info')">Thông tin</button>
+      <button class="nav-btn" onclick="showSection('booking')">Đặt vé</button>
+      <button class="nav-btn" onclick="showSection('history')">Lịch sử</button>
+      <button class="nav-btn" onclick="logout()">Đăng xuất</button>
+    </div>
+
+    <div id="info" class="user-section">
+      <div id="userInfo">
+        <h2>1. Thông tin cá nhân</h2>
+        <div>
+          <label>Tên:</label>
+          <span id="nameText">null</span>
+        </div>
+        <div>
+          <label>Tuổi:</label>
+          <span id="ageText">null</span>
+        </div>
+        <div>
+          <label>Giới tính:</label>
+          <span id="genderText"> null</span>
+        </div>
+        <div>
+          <label>Ngày tháng năm sinh:</label>
+          <span id="dobText"> null</span>
+        </div>
+        <div>
+          <label>Địa chỉ:</label>
+          <span id="addressText">null</span>
+        </div>
+      </div>
+      <br />
+      <div>
+        <button type="button" onclick="nextSection_DatVe()">Next ></button>
+      </div>
+    </div>
+
+    <div id="booking" class="user-section" style="display: none">
+      <h2>2. Đặt vé</h2>
+      <div class="container">
+        <div class="left-panel">
+          <h2>Thông tin vé</h2>
+          <form id="ticketForm">
+            <div class="form-group">
+              <label for="startTime">Bắt đầu:</label>
+              <input type="time" id="startDateTime" name="startTime" />
+            </div>
+            <div class="form-group">
+              <label for="endTime">Kết thúc:</label>
+              <input type="time" id="endDateTime" name="endTime" />
+            </div>
+            <div class="form-group">
+              <label for="parkingCost">Chi phí đậu xe:</label>
+              <span id="parkingCost">0</span><span> VNĐ</span>
+            </div>
+            <div class="left-panel">
+              <h2>Thanh toán</h2>
+            </div>
+            <div class="right-panel">
+              <div class="payment-methods">
+                <select id="paymentMethod" name="paymentMethod">
+                  <option value="Tiền mặt">Tiền mặt</option>
+                  <option value="Thẻ">Thẻ</option>
+                  <option value="Momo">Momo</option>
+                </select>
+              </div>
+            </div>
+            <br />
+            <div>
+              <button type="button" id="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="right-panel">
+          <h2>Chọn chỗ đậu</h2>
+          <div id="parkingGrid" class="parking-grid">
+            <!-- Ma trận ô vuông sẽ được tạo ra bằng JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="history" class="user-section" style="display: none">
+      <h2>3. Lịch sử đặt vé</h2>
+      <table id="bookingHistoryTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Ngày sinh</th>
+            <th>Ngày Đặt</th>
+            <th>Phương thức</th>
+            <th>Mã QR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+        </tbody>
+      </table>
+
+      <!-- Nội dung của phần lịch sử đặt vé -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="/src/userScript.js"></script>
+  </body>
+</html>
