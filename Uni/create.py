@@ -130,5 +130,3 @@ class buildDatabase:
             return self.db[ID]
         return {}
     
-
-print('run code successfully')
